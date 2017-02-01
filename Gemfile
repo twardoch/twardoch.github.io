@@ -42,4 +42,5 @@ group :jekyll_misc_plugins do
 gem 'jekyll-compose', '>= 0.4.1'
 gem 'font-awesome-sass', '>= 4.6.2'
 gem 'travis', '>= 1.8.2'
+gem 'jekyll-contentblocks'
 end

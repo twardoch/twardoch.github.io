@@ -17,8 +17,11 @@ author:
     email: adam+github@twardoch.com
 version: 1.0.0
 
-#gems:
-#  - jekyll-seo-tag
+gems:
+    - jekyll-sitemap
+    - jekyll-seo-tag
+    - jemoji
+    - jekyll-mentions
 
 encoding: utf-8
 
