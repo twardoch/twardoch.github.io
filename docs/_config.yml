@@ -42,9 +42,30 @@ gh_edit_source: docs
 gh_edit_view_mode: tree
 
 plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-remote-theme
+  - jekyll-remote-theme       # remote_theme: ... loader
+  - jekyll-seo-tag            # <head> SEO/OG/Twitter/JSON-LD
+  - jekyll-sitemap            # /sitemap.xml
+  - jekyll-feed               # /feed.xml Atom feed
+  - jekyll-redirect-from      # per-page redirect_from: front matter
+  - jekyll-include-cache      # speeds up theme {% include %} calls
+  - jekyll-mentions           # auto-link @username → GitHub
+  - jemoji                    # :emoji: shortcodes → images
+
+# Atom feed metadata (jekyll-feed)
+author:
+  name: Adam Twardoch
+  email: adam+github@twardoch.com
+
+# Markdown / syntax highlighting
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Permalinks (pretty URLs without .html)
+permalink: pretty
 
 exclude:
   - Gemfile
@@ -52,3 +73,5 @@ exclude:
   - README.md
   - node_modules/
   - vendor/
+  - .bundle/
+  - .jekyll-cache/
