@@ -1,0 +1,84 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1778879416027,
+  "projectRoot": "/Users/adam/Developer/vcs3/github.twardoch/pub/twardoch.github.io",
+  "techStack": {
+    "languages": [
+      {
+        "name": "Ruby",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "Gemfile"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "bundler",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "public"
+    ],
+    "gitBranches": {
+      "defaultBranch": "master",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "_includes": {
+      "path": "_includes",
+      "purpose": null,
+      "fileCount": 5,
+      "lastAccessed": 1778879416022,
+      "keyFiles": [
+        "breadcrumbs.html",
+        "footer.html",
+        "head.html",
+        "header.html",
+        "sidebar.html"
+      ]
+    },
+    "_layouts": {
+      "path": "_layouts",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1778879416023,
+      "keyFiles": [
+        "constellation.html",
+        "default.html",
+        "page.html",
+        "post.html"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 2,
+      "lastAccessed": 1778879416023,
+      "keyFiles": [
+        "apple-touch-icon-precomposed.png",
+        "favicon.ico"
+      ]
+    }
+  },
+  "hotPaths": [],
+  "userDirectives": []
+}
