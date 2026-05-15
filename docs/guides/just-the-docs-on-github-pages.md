@@ -155,7 +155,7 @@ is silently stripped from your `plugins:` block.
 | `ruby` | 3.3.4 | The Ruby runtime your build executes on. |
 | `jekyll` | 3.10.0 | The static-site generator. **Frozen at 3.x** — themes/plugins that require Jekyll 4 (e.g. Chirpy) won't run. |
 | `github-pages` | 232 | The meta-gem itself; this number is what you'd see in [GitHub's dependency dashboard]. |
-| `liquid` | 4.0.4 | The template language inside `{% %}`/`{{ }}` tags. |
+| `liquid` | 4.0.4 | The template language inside {% raw %}`{% %}`/`{{ }}`{% endraw %} tags. |
 | `kramdown` | 2.4.0 | Default Markdown renderer for `.md` files (used unless you set `markdown: CommonMarkGhPages`). |
 | `kramdown-parser-gfm` | 1.1.0 | GitHub-Flavoured Markdown parser plugged into kramdown. |
 | `jekyll-commonmark-ghpages` | 0.5.1 | Opt-in CommonMark renderer that matches `github.com` rendering of `README.md`. |
@@ -173,17 +173,17 @@ is silently stripped from your `plugins:` block.
 | --- | --- | --- | --- |
 | `jekyll-feed` | 0.17.0 | Atom feed at `/feed.xml`. | `plugins: [jekyll-feed]` |
 | `jekyll-sitemap` | 1.4.0 | `/sitemap.xml` listing every page. | `plugins: [jekyll-sitemap]` |
-| `jekyll-seo-tag` | 2.8.0 | `<title>`, `<meta>` description, Open Graph, Twitter Card, JSON-LD. Put `{% seo %}` in `<head>`. | `plugins: [jekyll-seo-tag]` |
+| `jekyll-seo-tag` | 2.8.0 | `<title>`, `<meta>` description, Open Graph, Twitter Card, JSON-LD. Put {% raw %}`{% seo %}`{% endraw %} in `<head>`. | `plugins: [jekyll-seo-tag]` |
 | `jekyll-redirect-from` | 0.16.0 | Per-page `redirect_from:` front matter generates stub HTML pages with `<meta refresh>`. | Add `redirect_from: [/old/path/]` to a post. |
 | `jekyll-remote-theme` | 0.4.3 | Lets you set `remote_theme: user/repo@ref` instead of a theme gem. | `remote_theme: just-the-docs/just-the-docs@v0.12.0` |
-| `jekyll-include-cache` | 0.2.1 | Caches `{% include %}` results across pages — silent speed-up that big themes (Minimal Mistakes, Just the Docs) rely on. | Just enable it. |
+| `jekyll-include-cache` | 0.2.1 | Caches {% raw %}`{% include %}`{% endraw %} results across pages — silent speed-up that big themes (Minimal Mistakes, Just the Docs) rely on. | Just enable it. |
 | `jekyll-paginate` | 1.1.0 | Old-style numbered paginator for `index.html`. Limited (one collection only, no nested paths). | `paginate: 5` + `paginate_path: "/page:num/"` |
-| `jekyll-gist` | 1.5.0 | `{% gist user/id %}` embeds a Gist. | Inline tag. |
-| `jekyll-avatar` | 0.8.0 | `{% avatar user %}` → GitHub avatar `<img>` with sensible defaults. | Inline tag. |
+| `jekyll-gist` | 1.5.0 | {% raw %}`{% gist user/id %}`{% endraw %} embeds a Gist. | Inline tag. |
+| `jekyll-avatar` | 0.8.0 | {% raw %}`{% avatar user %}`{% endraw %} → GitHub avatar `<img>` with sensible defaults. | Inline tag. |
 | `jemoji` | 0.13.0 | Converts `:smile:` style emoji shortcodes to images. | `plugins: [jemoji]` |
 | `jekyll-mentions` | 1.6.0 | Auto-links `@username` to `https://github.com/username`. | `plugins: [jekyll-mentions]` |
 | `jekyll-coffeescript` | 1.2.2 | `.coffee` files compile to `.js`. Legacy — modern projects ship `.js` directly. | `plugins: [jekyll-coffeescript]` |
-| `jekyll-github-metadata` | 2.16.1 | Exposes `site.github.*` (repo URL, default branch, owner, contributors, etc.). Auto-enabled on Pages. | Read via `{{ site.github.repository_url }}`. |
+| `jekyll-github-metadata` | 2.16.1 | Exposes `site.github.*` (repo URL, default branch, owner, contributors, etc.). Auto-enabled on Pages. | Read via {% raw %}`{{ site.github.repository_url }}`{% endraw %}. |
 | `jekyll-relative-links` | 0.6.1 | Rewrites relative Markdown links (`[x](other.md)`) to their built URLs so the same `README.md` works on `github.com` and on the published site. | Auto-enabled (opt out with `relative_links: { enabled: false }`). |
 | `jekyll-optional-front-matter` | 0.3.2 | Processes `.md` files **without** front matter (otherwise Jekyll ignores them). Lets a top-level `README.md` render as a page. | Auto-enabled. |
 | `jekyll-readme-index` | 0.3.0 | Uses `README.md` as the index page of a directory when no `index.md` is present. | Auto-enabled. |
