@@ -1,0 +1,44 @@
+name: Build
+
+# The site deploys via GitHub Pages "Deploy from a branch", so this workflow
+# does not publish anything. It only proves the site still builds and that the
+# generated HTML has no broken internal links before a change reaches master.
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: docs
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+          working-directory: docs
+
+      - name: Build site
+        run: bundle exec jekyll build --trace
+        env:
+          JEKYLL_ENV: production
+
+      - name: Check internal links and HTML
+        run: |
+          gem install html-proofer
+          htmlproofer _site \
+            --disable-external \
+            --allow-hash-href \
+            --ignore-urls "/^https?:\/\//"

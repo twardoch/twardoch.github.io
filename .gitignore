@@ -1,5 +1,11 @@
 _site/
 
+# Local agent/tooling state
+.omc/
+
+# Stray build artifact — not part of the site
+ruvector.db
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
